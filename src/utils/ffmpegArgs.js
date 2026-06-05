@@ -82,8 +82,6 @@ export const PRESETS = {
     stripVideo: false,
     audioCodec: 'aac',
     audioBitrate: '64k',
-    volume: 100,
-    audioDelay: 0,
   },
   iMessageHD: {
     resolution: '720p',
@@ -93,8 +91,6 @@ export const PRESETS = {
     stripVideo: false,
     audioCodec: 'aac',
     audioBitrate: '96k',
-    volume: 100,
-    audioDelay: 0,
   },
   keepQuality: {
     resolution: 'original',
@@ -104,8 +100,6 @@ export const PRESETS = {
     stripVideo: false,
     audioCodec: 'aac',
     audioBitrate: '128k',
-    volume: 100,
-    audioDelay: 0,
   },
 }
 

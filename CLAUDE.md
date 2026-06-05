@@ -100,7 +100,7 @@ After `terminate()`, the ref is null and `isLoaded` resets. `cancel()` in `useFF
   stripVideo: boolean,
   audioCodec: 'aac' | 'strip',
   audioBitrate: '64k' | '96k' | '128k' | '192k',
-  volume: 0–200,        // percent, 100 = unchanged
+  volume: 0–400,        // percent, 100 = unchanged
   audioDelay: 0–2000,  // ms; positive only — delays audio to fix audio-ahead-of-video sync
 }
 ```

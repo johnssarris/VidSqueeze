@@ -97,7 +97,7 @@ function Select({ label, value, onChange, options, disabled }) {
   )
 }
 
-function Slider({ label, value, onChange, min, max, step, display }) {
+function Slider({ label, value, onChange, min, max, step, display, disabled }) {
   return (
     <label className="flex flex-col gap-1">
       <div className="flex justify-between items-baseline">
@@ -111,7 +111,8 @@ function Slider({ label, value, onChange, min, max, step, display }) {
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-blue-500"
+        disabled={disabled}
+        className="w-full accent-blue-500 disabled:opacity-40 disabled:cursor-not-allowed"
       />
     </label>
   )
@@ -266,9 +267,10 @@ export default function SettingsPanel({ settings, onChange, disabled, mediaInfo,
               value={settings.volume}
               onChange={set('volume')}
               min={0}
-              max={200}
-              step={5}
+              max={400}
+              step={10}
               display={`${settings.volume}%`}
+              disabled={disabled || settings.audioCodec === 'strip'}
             />
           </div>
 
